@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5434/authguard}
+    username: ${DB_USER:authguard}
+    password: ${DB_PASSWORD:authguard}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+app:
+  jwt:
+    secret-base64: ${JWT_SECRET_BASE64}
+    issuer: authguard-api
+    ttl-minutes: 30
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
