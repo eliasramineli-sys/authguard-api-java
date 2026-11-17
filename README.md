@@ -1,8 +1,6 @@
-# AuthGuard API 🔐 — Projeto 3/9 | Portfólio Java Backend
+# AuthGuard API 🔐
 
 API REST educacional de **cadastro, autenticação JWT e autorização por perfis** com Java 21, Spring Boot 3.5.7, Spring Security, PostgreSQL e Flyway.
-
-> Projeto de portfólio. Não utilizar diretamente em produção. Nunca publique chaves JWT ou senhas de produção.
 
 ## Funcionalidades
 - Cadastro público com perfil USER fixo
@@ -69,7 +67,7 @@ src/test/java/ # Testes JUnit
 ## Limitações de segurança
 Projeto educacional, sem refresh token, revogação, MFA, rate limiting, confirmação de e-mail, recuperação de senha ou integração automatizada com PostgreSQL. Tokens contêm roles do instante da emissão; alterações só valem para novos tokens. Use TLS em ambientes reais. Provisionamento de administrador exigiria um fluxo seguro específico. O workflow testa unidades, não a integração com banco.
 
-## Pontos para entrevista
+## Pontos Importantes
 Autenticação versus autorização, BCrypt, JWT, claims, HTTP 401/403, RBAC, Spring Security, `@Transactional`, DTOs, persistência e limites de JWT stateless.
 
 ## Licença
